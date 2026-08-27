@@ -7,61 +7,63 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenConsult }) => {
   return (
-    <section className="relative pt-12 sm:pt-16 2xl:pt-24 pb-16 sm:pb-22 2xl:pb-32 border-b border-[#F0F0F2] overflow-hidden" id="top">
+    <section className="relative pt-8 sm:pt-12 md:pt-16 lg:pt-20 2xl:pt-24 3xl:pt-28 pb-12 sm:pb-16 md:pb-20 lg:pb-24 2xl:pb-32 3xl:pb-40 border-b border-[#F0F0F2] overflow-hidden" id="top">
       {/* Hero Background Image with high visibility */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img 
           src="/web4.webp" 
           alt="Homeowner property relief background" 
-          className="w-full h-full object-cover object-center opacity-95 2xl:opacity-100 scale-105 -translate-y-[5%]"
+          className="w-full h-full object-cover object-center opacity-90 sm:opacity-95 2xl:opacity-100 scale-105 sm:scale-110 md:scale-105 -translate-y-[5%]"
         />
         {/* Minimal bottom fade for smooth transition into next section */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/30 sm:from-white/20 via-transparent to-white" />
       </div>
 
       {/* Subtle minimal background glow */}
-      <div className="absolute top-0 right-1/4 w-[500px] 2xl:w-[750px] h-[300px] 2xl:h-[450px] bg-[#0066FF]/10 blur-[120px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 left-1/4 w-[450px] 2xl:w-[700px] h-[250px] 2xl:h-[400px] bg-black/5 blur-[100px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 right-1/4 w-[300px] sm:w-[400px] md:w-[500px] 2xl:w-[750px] 3xl:w-[900px] h-[200px] sm:h-[250px] md:h-[300px] 2xl:h-[450px] 3xl:h-[550px] bg-[#0066FF]/10 blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-1/4 w-[280px] sm:w-[350px] md:w-[450px] 2xl:w-[700px] 3xl:w-[850px] h-[180px] sm:h-[200px] md:h-[250px] 2xl:h-[400px] 3xl:h-[500px] bg-black/5 blur-[100px] pointer-events-none rounded-full" />
 
       <div className="site-container relative z-10">
-        <div className="flex flex-col items-center text-center max-w-3xl lg:max-w-4xl 2xl:max-w-5xl mx-auto">
+        <div className="flex flex-col items-center text-center max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl mx-auto px-4 sm:px-6">
           
           {/* Sleek Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 mb-5 sm:mb-6 bg-[#F5F5F7] border border-[#E5E5E7] rounded-full text-[10px] sm:text-[11px] font-bold tracking-widest uppercase text-[#86868B]">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 md:px-4 py-1.5 mb-4 sm:mb-5 md:mb-6 bg-[#F5F5F7] border border-[#E5E5E7] rounded-full text-[9px] sm:text-[10px] md:text-[11px] font-bold tracking-widest uppercase text-[#86868B]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#0066FF] animate-pulse"></span>
-            Notice Regarding Your Property
+            <span className="hidden xs:inline">Notice Regarding Your Property</span>
+            <span className="xs:hidden">Property Notice</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-6xl 2xl:text-[4.25rem] font-extrabold tracking-tight leading-[1.1] text-[#1A1A1A] mb-5 sm:mb-6">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-[4.25rem] 3xl:text-[5rem] font-extrabold tracking-tight leading-[1.15] sm:leading-[1.1] text-[#1A1A1A] mb-4 sm:mb-5 md:mb-6">
             Behind on Taxes? Lost a Property?<br className="hidden sm:block" />
-            We Help Homeowners <span className="text-[#0066FF]">Stay</span>, <span className="text-black underline decoration-[#E5E5E7] underline-offset-8">Sell</span>, or <span className="text-[#0066FF]">Reclaim</span> — at $0 Out of Pocket
+            We Help Homeowners <span className="text-[#0066FF]">Stay</span>, <span className="text-black underline decoration-[#E5E5E7] underline-offset-4 sm:underline-offset-8">Sell</span>, or <span className="text-[#0066FF]">Reclaim</span> — at $0 Out of Pocket
           </h1>
 
-          <p className="text-base sm:text-lg 2xl:text-xl text-[#1A1A1A] max-w-2xl 2xl:max-w-3xl leading-relaxed mb-8 sm:mb-10 font-normal">
+          <p className="text-sm sm:text-base md:text-lg 2xl:text-xl 3xl:text-2xl text-[#1A1A1A] max-w-xl sm:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl leading-relaxed mb-6 sm:mb-8 md:mb-10 font-normal">
             Whether you're fighting to keep your property, ready to move on, or trying to claim money left behind — we're on your side. Our team handles everything, including legal support. You don't pay a dime upfront.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-3.5 md:gap-4 mb-5 sm:mb-6 w-full sm:w-auto">
             <button 
               onClick={() => onOpenConsult('general')}
-              className="w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 bg-black text-white font-bold text-sm sm:text-base rounded-xl shadow-xl shadow-black/10 hover:bg-[#222222] active:scale-[0.99] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+              className="w-full sm:w-auto px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 bg-black text-white font-bold text-xs sm:text-sm md:text-base rounded-xl shadow-xl shadow-black/10 hover:bg-[#222222] active:scale-[0.99] transition-all flex items-center justify-center gap-2 sm:gap-2.5 cursor-pointer"
             >
-              <span>Get Help Now — Free, No-Obligation Consultation</span>
-              <ArrowRight className="w-4 h-4 text-[#0066FF]" />
+              <span className="hidden sm:inline">Get Help Now — Free, No-Obligation Consultation</span>
+              <span className="sm:hidden">Get Free Consultation</span>
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0066FF]" />
             </button>
 
             <a 
               href="tel:4045902664"
-              className="w-full sm:w-auto px-6 py-3.5 sm:py-4 bg-white border border-[#DEDEDE] text-black font-bold text-sm sm:text-base rounded-xl hover:bg-[#F5F5F7] hover:border-[#CCCCCC] transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-3.5 md:py-4 bg-white border border-[#DEDEDE] text-black font-bold text-xs sm:text-sm md:text-base rounded-xl hover:bg-[#F5F5F7] hover:border-[#CCCCCC] transition-all flex items-center justify-center gap-2"
             >
-              <Phone className="w-4 h-4 text-[#666666]" />
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#666666]" />
               <span>Call (404) 590-2664</span>
             </a>
           </div>
 
-          <div className="flex items-center gap-2 text-xs font-mono-code font-medium text-[#1A1A1A]">
-            <ShieldCheck className="w-4 h-4 text-[#0066FF]" />
-            <span>No upfront fees · No obligation · 100% Confidential</span>
+          <div className="flex items-center justify-center gap-2 text-[10px] sm:text-xs font-mono-code font-medium text-[#1A1A1A]">
+            <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0066FF]" />
+            <span className="text-center">No upfront fees · No obligation · 100% Confidential</span>
           </div>
         </div>
 

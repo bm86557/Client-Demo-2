@@ -39,53 +39,53 @@ export const ConsultModal: React.FC<ConsultModalProps> = ({ isOpen, initialPath,
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm">
-      <div className="relative w-full max-w-lg 2xl:max-w-xl bg-white rounded-3xl 2xl:rounded-4xl shadow-2xl border border-[#E5E5E7] p-6 sm:p-8 2xl:p-10 max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 xs:p-4 sm:p-6 bg-black/60 backdrop-blur-sm">
+      <div className="relative w-full max-w-lg 2xl:max-w-xl 3xl:max-w-2xl bg-white rounded-2xl xs:rounded-3xl 2xl:rounded-4xl shadow-2xl border border-[#E5E5E7] p-5 xs:p-6 sm:p-8 2xl:p-10 3xl:p-12 max-h-[90vh] overflow-y-auto">
         
         <button 
           onClick={handleClose}
-          className="absolute top-5 right-5 2xl:top-6 2xl:right-6 text-[#86868B] hover:text-black p-1.5 2xl:p-2 rounded-full hover:bg-[#F5F5F7] transition-colors cursor-pointer"
+          className="absolute top-4 xs:top-5 right-4 xs:right-5 2xl:top-6 2xl:right-6 text-[#86868B] hover:text-black p-1 xs:p-1.5 2xl:p-2 rounded-full hover:bg-[#F5F5F7] transition-colors cursor-pointer"
           title="Close modal"
         >
-          <X className="w-5 h-5 2xl:w-6 2xl:h-6" />
+          <X className="w-4 h-4 xs:w-5 xs:h-5 2xl:w-6 2xl:h-6 3xl:w-7 3xl:h-7" />
         </button>
 
         {formSubmitted ? (
-          <div className="text-center py-6">
-            <div className="w-14 h-14 rounded-2xl bg-black text-[#0066FF] flex items-center justify-center mx-auto mb-4 border border-[#333333]">
-              <Check className="w-7 h-7" />
+          <div className="text-center py-4 xs:py-5 sm:py-6">
+            <div className="w-12 h-12 xs:w-14 xs:h-14 2xl:w-16 2xl:h-16 rounded-xl xs:rounded-2xl bg-black text-[#0066FF] flex items-center justify-center mx-auto mb-3 xs:mb-4 border border-[#333333]">
+              <Check className="w-6 h-6 xs:w-7 xs:h-7 2xl:w-8 2xl:h-8" />
             </div>
-            <h3 className="text-2xl font-bold text-[#1A1A1A] tracking-tight mb-2">Request Received</h3>
-            <p className="text-sm text-[#666666] mb-6 leading-relaxed">
+            <h3 className="text-xl xs:text-2xl 2xl:text-3xl font-bold text-[#1A1A1A] tracking-tight mb-1.5 xs:mb-2">Request Received</h3>
+            <p className="text-xs xs:text-sm 2xl:text-base text-[#666666] mb-5 xs:mb-6 leading-relaxed px-2 xs:px-0">
               Thank you for reaching out to Homeowner Relief Network. An advocate will review your county records and contact you within 24 hours.
             </p>
-            <div className="p-3.5 bg-[#F5F5F7] border border-[#E5E5E7] rounded-xl text-xs font-mono-code text-[#1A1A1A] mb-6">
+            <div className="p-3 xs:p-3.5 2xl:p-4 bg-[#F5F5F7] border border-[#E5E5E7] rounded-lg xs:rounded-xl text-[10px] xs:text-xs 2xl:text-sm font-mono-code text-[#1A1A1A] mb-5 xs:mb-6">
               Case File: HRN-{Math.floor(100000 + Math.random() * 900000)} · Confidential
             </div>
             <button
               onClick={handleClose}
-              className="px-8 py-3 rounded-full bg-black text-white font-bold text-sm hover:bg-[#333333] transition-colors cursor-pointer"
+              className="px-6 xs:px-8 py-2.5 xs:py-3 2xl:py-3.5 rounded-full bg-black text-white font-bold text-xs xs:text-sm 2xl:text-base hover:bg-[#333333] transition-colors cursor-pointer"
             >
               Done
             </button>
           </div>
         ) : (
           <div>
-            <div className="mb-6">
-              <div className="inline-block px-3 py-1 bg-[#F5F5F7] border border-[#E5E5E7] rounded-full text-[10px] font-bold tracking-widest uppercase text-[#86868B] mb-2">
+            <div className="mb-5 xs:mb-6">
+              <div className="inline-block px-2.5 xs:px-3 py-0.5 xs:py-1 bg-[#F5F5F7] border border-[#E5E5E7] rounded-full text-[9px] xs:text-[10px] 2xl:text-xs font-bold tracking-widest uppercase text-[#86868B] mb-1.5 xs:mb-2">
                 Confidential · $0 Out of Pocket
               </div>
-              <h3 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">
+              <h3 className="text-xl xs:text-2xl 2xl:text-3xl font-bold tracking-tight text-[#1A1A1A]">
                 Request Your Free Property Review
               </h3>
-              <p className="text-xs text-[#666666] mt-1">
+              <p className="text-[10px] xs:text-xs 2xl:text-sm text-[#666666] mt-1">
                 No upfront fees, no obligation. Our research team will review your county status.
               </p>
             </div>
 
-            <form onSubmit={handleFormSubmit} className="space-y-4">
+            <form onSubmit={handleFormSubmit} className="space-y-3.5 xs:space-y-4">
               <div>
-                <label className="block text-[11px] font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1.5">
+                <label className="block text-[10px] xs:text-[11px] 2xl:text-xs font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1 xs:mb-1.5">
                   Full Name *
                 </label>
                 <input 
@@ -94,13 +94,13 @@ export const ConsultModal: React.FC<ConsultModalProps> = ({ isOpen, initialPath,
                   placeholder="Jane Doe"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
+                  className="w-full px-3 xs:px-4 py-2 xs:py-2.5 2xl:py-3 text-xs xs:text-sm 2xl:text-base rounded-lg xs:rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 xs:gap-3.5">
                 <div>
-                  <label className="block text-[11px] font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1.5">
+                  <label className="block text-[10px] xs:text-[11px] 2xl:text-xs font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1 xs:mb-1.5">
                     Phone Number *
                   </label>
                   <input 
@@ -109,11 +109,11 @@ export const ConsultModal: React.FC<ConsultModalProps> = ({ isOpen, initialPath,
                     placeholder="(555) 000-0000"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
+                    className="w-full px-3 xs:px-4 py-2 xs:py-2.5 2xl:py-3 text-xs xs:text-sm 2xl:text-base rounded-lg xs:rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1.5">
+                  <label className="block text-[10px] xs:text-[11px] 2xl:text-xs font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1 xs:mb-1.5">
                     Email Address
                   </label>
                   <input 
@@ -121,14 +121,14 @@ export const ConsultModal: React.FC<ConsultModalProps> = ({ isOpen, initialPath,
                     placeholder="jane@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
+                    className="w-full px-3 xs:px-4 py-2 xs:py-2.5 2xl:py-3 text-xs xs:text-sm 2xl:text-base rounded-lg xs:rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 xs:gap-3.5">
                 <div>
-                  <label className="block text-[11px] font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1.5">
+                  <label className="block text-[10px] xs:text-[11px] 2xl:text-xs font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1 xs:mb-1.5">
                     Property Address
                   </label>
                   <input 
@@ -136,11 +136,11 @@ export const ConsultModal: React.FC<ConsultModalProps> = ({ isOpen, initialPath,
                     placeholder="123 Maple St"
                     value={formData.address}
                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                    className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
+                    className="w-full px-3 xs:px-4 py-2 xs:py-2.5 2xl:py-3 text-xs xs:text-sm 2xl:text-base rounded-lg xs:rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1.5">
+                  <label className="block text-[10px] xs:text-[11px] 2xl:text-xs font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1 xs:mb-1.5">
                     County & State
                   </label>
                   <input 
@@ -148,19 +148,19 @@ export const ConsultModal: React.FC<ConsultModalProps> = ({ isOpen, initialPath,
                     placeholder="Cook County, IL"
                     value={formData.countyState}
                     onChange={(e) => setFormData({ ...formData, countyState: e.target.value })}
-                    className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
+                    className="w-full px-3 xs:px-4 py-2 xs:py-2.5 2xl:py-3 text-xs xs:text-sm 2xl:text-base rounded-lg xs:rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1.5">
+                <label className="block text-[10px] xs:text-[11px] 2xl:text-xs font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1 xs:mb-1.5">
                   Primary Objective / Situation
                 </label>
                 <select 
                   value={formData.situation}
                   onChange={(e) => setFormData({ ...formData, situation: e.target.value })}
-                  className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-sans"
+                  className="w-full px-3 xs:px-4 py-2 xs:py-2.5 2xl:py-3 text-xs xs:text-sm 2xl:text-base rounded-lg xs:rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-sans"
                 >
                   <option value="Want to stay in my home (Tax deed / Redemption)">Path 1: Want to stay in my home</option>
                   <option value="Looking to sell my property with dignity">Path 2: Looking to sell with dignity</option>
@@ -171,7 +171,7 @@ export const ConsultModal: React.FC<ConsultModalProps> = ({ isOpen, initialPath,
               </div>
 
               <div>
-                <label className="block text-[11px] font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1.5">
+                <label className="block text-[10px] xs:text-[11px] 2xl:text-xs font-mono-code font-bold text-[#86868B] uppercase tracking-wider mb-1 xs:mb-1.5">
                   Additional Notes (Optional)
                 </label>
                 <textarea 
@@ -179,19 +179,19 @@ export const ConsultModal: React.FC<ConsultModalProps> = ({ isOpen, initialPath,
                   placeholder="Any notice dates or details about your property..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full px-4 py-2.5 text-sm rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-sans"
+                  className="w-full px-3 xs:px-4 py-2 xs:py-2.5 2xl:py-3 text-xs xs:text-sm 2xl:text-base rounded-lg xs:rounded-xl border border-[#DEDEDE] bg-white focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-sans"
                 />
               </div>
 
-              <div className="pt-2">
+              <div className="pt-1.5 xs:pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-4 rounded-xl bg-black text-white font-bold text-sm hover:bg-[#333333] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-black/10 active:scale-[0.99]"
+                  className="w-full py-3 xs:py-3.5 2xl:py-4 px-4 rounded-lg xs:rounded-xl bg-black text-white font-bold text-xs xs:text-sm 2xl:text-base hover:bg-[#333333] transition-all flex items-center justify-center gap-1.5 xs:gap-2 cursor-pointer shadow-lg shadow-black/10 active:scale-[0.99]"
                 >
-                  <Send className="w-4 h-4 text-[#0066FF]" />
+                  <Send className="w-3.5 h-3.5 xs:w-4 xs:h-4 2xl:w-5 2xl:h-5 text-[#0066FF]" />
                   <span>Submit For Free Case Evaluation</span>
                 </button>
-                <span className="text-[11px] text-[#86868B] text-center block mt-2.5">
+                <span className="text-[10px] xs:text-[11px] 2xl:text-xs text-[#86868B] text-center block mt-2 xs:mt-2.5">
                   🔒 Your data is 100% confidential. No spam, ever.
                 </span>
               </div>
