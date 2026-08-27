@@ -1,0 +1,6 @@
+{
+  "name": "Homeowner Relief Network",
+  "description": "Helping homeowners facing tax distress stay, sell with dignity, or reclaim excess funds with $0 out of pocket.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
