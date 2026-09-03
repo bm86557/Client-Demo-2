@@ -27,6 +27,12 @@
     background-color: var(--bg-main);
     color: var(--text-primary);
     letter-spacing: -0.015em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4 {
@@ -36,6 +42,15 @@
   .font-mono-code {
     font-family: 'JetBrains Mono', monospace;
   }
+
+  /* Ensure images render crisp and clear on all devices */
+  img {
+    image-rendering: auto;
+    -ms-interpolation-mode: bicubic;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
 }
 
 /* Fluid responsive container system with refined edge gutters */
@@ -44,8 +59,15 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1380px;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 420px) {
+  .site-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -101,4 +123,49 @@
   background: #8E8E93;
 }
 
+/* Mobile text selection improvements */
+@media (max-width: 639px) {
+  ::selection {
+    background-color: rgba(0, 102, 255, 0.2);
+  }
+}
 
+/* Prevent layout shift from images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 1023px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Responsive typography fluid scaling */
+@media (max-width: 374px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 639px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}

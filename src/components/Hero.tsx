@@ -8,12 +8,24 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenConsult }) => {
   return (
     <section className="relative pt-8 sm:pt-12 md:pt-16 lg:pt-20 2xl:pt-24 3xl:pt-28 pb-12 sm:pb-16 md:pb-20 lg:pb-24 2xl:pb-32 3xl:pb-40 border-b border-[#F0F0F2] overflow-hidden" id="top">
-      {/* Hero Background Image with high visibility */}
+      {/* Hero Background Image - CRYSTAL CLEAR */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img 
-          src="/web4.webp" 
+          src="/Demothreehero.jpeg" 
           alt="Homeowner property relief background" 
-          className="w-full h-full object-cover object-center opacity-90 sm:opacity-95 2xl:opacity-100 scale-105 sm:scale-110 md:scale-105 -translate-y-[5%]"
+          width={1600}
+          height={900}
+          className="w-full h-full object-cover object-center opacity-100"
+          style={{
+            filter: 'contrast(1.04) saturate(1.08) brightness(1.02)',
+            imageRendering: 'auto',
+            objectPosition: 'center center',
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden'
+          }}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         {/* Minimal bottom fade for smooth transition into next section */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/30 sm:from-white/20 via-transparent to-white" />

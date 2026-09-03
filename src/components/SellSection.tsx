@@ -53,12 +53,21 @@ export const SellSection: React.FC<SellSectionProps> = ({ onOpenConsult }) => {
               Path 2 · Sell
             </div>
             <img 
-              src="https://images.unsplash.com/photo-1782024743263-bb153ea077e1?fm=jpg&q=80&w=1200&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1782024743263-bb153ea077e1?fm=jpg&q=95&w=2000&auto=format&fit=crop" 
               alt="A sold sign with roses in front of a home, representing a dignified, well-managed sale"
-              className="w-full h-auto aspect-[4/3] max-h-[300px] xs:max-h-[350px] sm:max-h-[400px] md:max-h-[440px] 2xl:max-h-[500px] 3xl:max-h-[600px] object-cover group-hover:scale-[1.02] transition-transform duration-500"
-              loading="lazy"
+              width={1600}
+              height={1200}
+              className="w-full h-auto aspect-[4/3] max-h-[300px] xs:max-h-[350px] sm:max-h-[400px] md:max-h-[440px] 2xl:max-h-[500px] 3xl:max-h-[600px] object-cover"
+              style={{
+                imageRendering: 'auto',
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden'
+              }}
+              loading="eager"
+              decoding="async"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?fm=jpg&q=80&w=1200&auto=format&fit=crop";
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?fm=jpg&q=95&w=2000&auto=format&fit=crop";
               }}
             />
           </div>

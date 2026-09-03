@@ -17,12 +17,21 @@ export const ReclaimSection: React.FC<ReclaimSectionProps> = ({ onOpenConsult })
               Path 3 · Reclaim
             </div>
             <img 
-              src="https://images.unsplash.com/photo-1671469899829-8c1c400f5866?fm=jpg&q=80&w=1200&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1671469899829-8c1c400f5866?fm=jpg&q=95&w=2000&auto=format&fit=crop" 
               alt="A hand holding recovered cash, representing excess proceeds owed to former homeowners"
-              className="w-full h-auto aspect-[4/3] max-h-[300px] xs:max-h-[350px] sm:max-h-[400px] md:max-h-[440px] 2xl:max-h-[500px] 3xl:max-h-[600px] object-cover group-hover:scale-[1.02] transition-transform duration-500"
-              loading="lazy"
+              width={1600}
+              height={1200}
+              className="w-full h-auto aspect-[4/3] max-h-[300px] xs:max-h-[350px] sm:max-h-[400px] md:max-h-[440px] 2xl:max-h-[500px] 3xl:max-h-[600px] object-cover"
+              style={{
+                imageRendering: 'auto',
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden'
+              }}
+              loading="eager"
+              decoding="async"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?fm=jpg&q=80&w=1200&auto=format&fit=crop";
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?fm=jpg&q=95&w=2000&auto=format&fit=crop";
               }}
             />
           </div>

@@ -19,8 +19,19 @@ export const StaySection: React.FC<StaySectionProps> = ({ onOpenConsult }) => {
             <img 
               src="/staysection.jpg" 
               alt="A family standing together looking toward their home from the front yard"
-              className="w-full h-auto aspect-[4/3] max-h-[300px] xs:max-h-[350px] sm:max-h-[400px] md:max-h-[440px] 2xl:max-h-[500px] 3xl:max-h-[600px] object-cover group-hover:scale-[1.02] transition-transform duration-500"
-              loading="lazy"
+              width={1600}
+              height={1200}
+              className="w-full h-auto aspect-[4/3] max-h-[300px] xs:max-h-[350px] sm:max-h-[400px] md:max-h-[440px] 2xl:max-h-[500px] 3xl:max-h-[600px] object-cover"
+              style={{
+                imageRendering: 'auto',
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                filter: 'none',
+                WebkitFilter: 'none'
+              }}
+              loading="eager"
+              decoding="async"
             />
           </div>
 
