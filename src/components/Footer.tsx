@@ -10,6 +10,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsult }) => {
     <footer className="bg-[#05070B] text-[#94A3B8] pt-6 xs:pt-7 sm:pt-8 md:pt-10 2xl:pt-12 3xl:pt-14 pb-6 xs:pb-7 sm:pb-8 2xl:pb-10 3xl:pb-12">
       <div className="site-container">
         
+        {/* Footer Logo */}
+        <div className="mb-6 xs:mb-7 sm:mb-8 md:mb-10 2xl:mb-12 3xl:mb-14">
+          <img 
+            src="/LOGOLANDINGPAGE.png" 
+            alt="Stay Sell Claim Logo"
+            className="object-contain w-auto brightness-0 invert"
+            style={{ height: '46px', maxWidth: '190px' }}
+          />
+        </div>
+        
         {/* Legal Fine Print & Bottom Bar */}
         <div className="space-y-4 xs:space-y-5 sm:space-y-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 xs:gap-4 text-xs 2xl:text-sm 3xl:text-base text-[#64748B]">
